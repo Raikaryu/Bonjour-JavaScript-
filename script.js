@@ -1,8 +1,10 @@
 const name = prompt("Quel est ton nom ?")
 function sayHello (firstname)
 {
+    const heureReference = "18:00"
     const time = updateDateTime()
-    if (time < 18) {
+    console.log(time)
+    if (time < heureReference ) {
       let message = "Bonjour" + " " + firstname + " !"
       document.querySelector('h1').innerText = message; 
     }  
@@ -19,6 +21,7 @@ function updateDateTime() {
     const message = ("il est actuellement " + hoursAndMinutes + " h")
     document.querySelector('h2').innerText = message;
     return hoursAndMinutes
-}
+} 
+
 
 sayHello(name)
